@@ -1,0 +1,10 @@
+PASSOS A SEREM SEGUIDOS:
+
+Criar projeto: API asp web ASP.NET CORE
+
+Instalar as dependências
+
+Abrir o gerenciador de pacotes do nugget nas ferramentas
+
+Quando abrir o terminal digitar o comando: Scarffold-DbContext "Aqui vai a string de conexao do banco de dados; Initial Catalog= Nome do projeto do banco de dados;
+ Integrated Security=true; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir contexts -Context NomeDoArquivo

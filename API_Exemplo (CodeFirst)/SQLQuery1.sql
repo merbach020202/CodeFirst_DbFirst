@@ -1,0 +1,24 @@
+USE inlock_games_CodeFirst_manha_Eduardo
+
+INSERT INTO TiposUsuario
+VALUES(NEWID(),'Administrador'), (NEWID(),'Comum')
+
+SELECT * FROM TiposUsuario
+
+
+INSERT INTO Usuario
+VALUES  (NEWID(),'admin@admin.com','administrador','016B7106-6853-4E3F-8047-7FC39BF5F89F'), 
+		(NEWID(),'comum@comum.com','comum','C996ACB1-876D-41B2-820E-6FDE037F3DED')
+
+SELECT * FROM Usuario
+
+
+INSERT INTO Estudio
+VALUES (NEWID(),'SENAI')
+
+SELECT * FROM Estudio
+
+INSERT INTO Jogo
+VALUES(NEWID(),'PING PONG DO ANDRÉ', 'JOGO VICIANTE SEGUNDO O ANDRÉ','2023-01-23',1.99, '76536B92-9D77-41B1-BE0A-14E9823B34E7')
+
+SELECT * FROM Jogo
