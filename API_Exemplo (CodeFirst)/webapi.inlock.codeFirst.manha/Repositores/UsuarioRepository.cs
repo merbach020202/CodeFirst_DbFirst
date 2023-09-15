@@ -22,9 +22,28 @@ namespace webapi.inlock.codeFirst.manha.Repositores
             ctx = new InlockContext();
         }
 
-        public Usuario BuscarUsuario(string email, string Senha)
+        public Usuario BuscarUsuario(string email, string senha)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Usuario usuarioBuscado = ctx.Usuario.FirstOrDefault(u => u.Email == email);
+
+                if (usuarioBuscado != null)
+                {
+                    bool confere = Criptografia.CompararHash(senha, usuarioBuscado.Senha!);
+
+                    if (confere)
+                    {
+                        return usuarioBuscado;
+                    }
+                }
+                return null;
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
         }
 
         public void Cadastrar(Usuario usuario)

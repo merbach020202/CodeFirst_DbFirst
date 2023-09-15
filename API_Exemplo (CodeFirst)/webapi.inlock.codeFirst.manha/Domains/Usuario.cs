@@ -18,7 +18,7 @@ namespace webapi.inlock.codeFirst.manha.Domains
 
         [Column(TypeName = "VARCHAR(100)")]
         [Required(ErrorMessage = "Senha obrigatória")]
-        [StringLength(maximumLength: 20, MinimumLength = 6, ErrorMessage = "Senha deve conter de 6 a 20 caracteres")]
+        [StringLength(maximumLength: 100, MinimumLength = 6, ErrorMessage = "Senha deve conter de 6 a 100 caracteres")]
         public string Senha { get; set; }
 
         //Referência da chave estrangeira (Tabela de TiposUsuario)
